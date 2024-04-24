@@ -35,7 +35,11 @@
       on:restart={handleRestart}
     />
   {:else}
-    <QuestionCard question={currentQuestion} on:select={handleSelectAnswer} />
+    <QuestionCard
+      question={currentQuestion}
+      answeredCount={answered.length}
+      on:select={handleSelectAnswer}
+    />
   {/if}
 </main>
 
