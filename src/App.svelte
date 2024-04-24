@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { StyleFromScheme } from 'm3-svelte'
+  import { StyleFromScheme, Switch } from 'm3-svelte'
   import FailureCard from './components/FailureCard.svelte'
   import QuestionCard from './components/QuestionCard.svelte'
   import { generateQuestion } from './question'
   import { dark, light } from './theme'
+
+  let needsConfirmation = false
 
   let answered: string[] = []
   let currentQuestion = generateQuestion(answered)
@@ -36,18 +38,37 @@
     />
   {:else}
     <QuestionCard
+      {needsConfirmation}
       question={currentQuestion}
       answeredCount={answered.length}
       on:select={handleSelectAnswer}
     />
   {/if}
 </main>
+<footer>
+  <label>
+    <Switch bind:checked={needsConfirmation} />
+    <span>Needs Confirmation</span>
+  </label>
+</footer>
 
 <style>
   main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 3.5rem);
+  }
+
+  footer {
+    height: 3.5rem;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer > * {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
   }
 </style>
