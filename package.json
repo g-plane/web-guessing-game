@@ -11,6 +11,7 @@
     "fmt:check": "dprint check"
   },
   "dependencies": {
+    "@iconify/svelte": "^3.1.6",
     "lodash-es": "^4.17.21",
     "m3-svelte": "^3.2.5"
   },

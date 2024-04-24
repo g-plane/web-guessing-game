@@ -8,7 +8,7 @@
   const dispatch = createEventDispatcher()
 </script>
 
-<div class="container">
+<div class="question">
   <img
     src="https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/cyclejs.png"
     alt=""
@@ -23,7 +23,7 @@
 </div>
 
 <style>
-  .container {
+  .question {
     display: flex;
     flex-direction: column;
     align-items: center;

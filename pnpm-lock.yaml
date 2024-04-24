@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify/svelte':
+    specifier: ^3.1.6
+    version: 3.1.6(svelte@4.2.15)
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -316,6 +319,15 @@ packages:
   /@gplane/tsconfig@6.1.0:
     resolution: {integrity: sha512-+WNtFH0x1Jjtp5m90dY5/u9wje5GAwjoEHJd60lQUzq9h1vfZ2ILeo9iQjFW9sB06g7mBXDf99iCvY0/t0pAUQ==}
     dev: true
+
+  /@iconify/svelte@3.1.6(svelte@4.2.15):
+    resolution: {integrity: sha512-yLSrlkOx5J6xXU5GDLPBV/MdVBVEZhd36onfqSbxQobp1XBoWQbMPLNZyCAmTKCPnmzXSowGy79agl8FQ3kj6A==}
+    peerDependencies:
+      svelte: '*'
+    dependencies:
+      '@iconify/types': 2.0.0
+      svelte: 4.2.15
+    dev: false
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}

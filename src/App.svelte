@@ -1,5 +1,6 @@
 <script lang="ts">
   import { StyleFromScheme } from 'm3-svelte'
+  import FailureCard from './components/FailureCard.svelte'
   import QuestionCard from './components/QuestionCard.svelte'
   import { generateQuestion } from './question'
   import { dark, light } from './theme'
@@ -16,13 +17,23 @@
       failure = answer
     }
   }
+
+  function handleRestart() {
+    answered = []
+    currentQuestion = generateQuestion(answered)
+    failure = null
+  }
 </script>
 
 <StyleFromScheme lightScheme={light} darkScheme={dark} />
-
 <main>
   {#if failure}
-    <!--  -->
+    <FailureCard
+      correct={currentQuestion.correct}
+      selected={failure}
+      {answered}
+      on:restart={handleRestart}
+    />
   {:else}
     <QuestionCard question={currentQuestion} on:select={handleSelectAnswer} />
   {/if}
