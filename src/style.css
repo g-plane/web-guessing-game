@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(var(--m3-scheme-background));
+  color: rgb(var(--m3-scheme-on-background));
+  height: 100vh;
+}

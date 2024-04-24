@@ -10,6 +10,9 @@
     "fmt": "dprint fmt",
     "fmt:check": "dprint check"
   },
+  "dependencies": {
+    "m3-svelte": "^3.2.5"
+  },
   "devDependencies": {
     "@gplane/tsconfig": "^6.1.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
