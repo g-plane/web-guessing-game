@@ -1,5 +1,11 @@
 <script lang="ts">
   import { Button } from 'm3-svelte'
+  import { createEventDispatcher } from 'svelte'
+  import type { Question } from '../question'
+
+  export let question: Question
+
+  const dispatch = createEventDispatcher()
 </script>
 
 <div class="container">
@@ -8,18 +14,11 @@
     alt=""
   >
   <ul class="answers">
-    <Button type="elevated">
-      <div class="answer-text">Cycle.js</div>
-    </Button>
-    <Button type="elevated">
-      <div class="answer-text">Cycle.js</div>
-    </Button>
-    <Button type="elevated">
-      <div class="answer-text">Cycle.js</div>
-    </Button>
-    <Button type="elevated">
-      <div class="answer-text">Cycle.js</div>
-    </Button>
+    {#each question.answers as answer (answer)}
+      <Button type="elevated" on:click={() => dispatch('select', answer)}>
+        <div class="answer-text">{answer}</div>
+      </Button>
+    {/each}
   </ul>
 </div>
 
