@@ -10,13 +10,12 @@
   export let answered: string[]
 
   const dispatch = createEventDispatcher()
+
+  $: imgPath = `/logos/${correct.name.toLowerCase()}.webp`
 </script>
 
 <div class="failure">
-  <img
-    src="https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/cyclejs.png"
-    alt=""
-  >
+  <img src={imgPath} alt="">
   <div>
     <div class="correct-answer">
       <strong>Correct Answer:</strong>

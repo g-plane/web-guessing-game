@@ -8,13 +8,12 @@
   export let answeredCount: number
 
   const dispatch = createEventDispatcher()
+
+  $: imgPath = `/logos/${question.correct.name.toLowerCase()}.webp`
 </script>
 
 <div class="question">
-  <img
-    src="https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/cyclejs.png"
-    alt=""
-  >
+  <img src={imgPath} alt="">
   <ul class="answers">
     {#each question.answers as answer (answer)}
       <Button type="elevated" on:click={() => dispatch('select', answer)}>
