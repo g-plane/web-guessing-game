@@ -13,6 +13,11 @@ this game adds these features:
 
 [Play now!](https://web-guessing.vercel.app/)
 
+## Contributing
+
+If you want to add a new logo or update an existing logo,
+see [Contributing Guide](./.github/CONTRIBUTING.md).
+
 ## License
 
 MIT License
