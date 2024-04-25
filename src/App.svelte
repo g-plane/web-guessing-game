@@ -57,11 +57,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 3.5rem);
+    height: 100vh;
   }
 
   footer {
-    height: 3.5rem;
+    position: fixed;
+    bottom: 0.5rem;
     padding: 0.25rem 0.5rem;
     display: flex;
     justify-content: space-between;
