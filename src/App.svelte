@@ -46,6 +46,7 @@
   {/if}
 </main>
 <footer>
+  <!-- svelte-ignore a11y-label-has-associated-control -->
   <label>
     <Switch bind:checked={needsConfirmation} />
     <span>Needs Confirmation</span>
