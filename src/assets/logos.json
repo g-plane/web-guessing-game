@@ -136,6 +136,10 @@
     "url": "https://naver.github.io/billboard.js/"
   },
   {
+    "name": "Biome",
+    "url": "https://biomejs.dev"
+  },
+  {
     "name": "Blaze_CSS",
     "url": "http://blazecss.com/"
   },
@@ -450,6 +454,10 @@
   {
     "name": "ES6",
     "url": "http://es6-features.org/"
+  },
+  {
+    "name": "esbuild",
+    "url": "https://esbuild.github.io"
   },
   {
     "name": "ESLint",
@@ -780,6 +788,10 @@
     "url": "https://lodash.com/"
   },
   {
+    "name": "Lume",
+    "url": "https://lume.land"
+  },
+  {
     "name": "Mailit",
     "url": "https://github.com/dthree/mailit"
   },
@@ -954,6 +966,10 @@
   {
     "name": "OpenUI5",
     "url": "https://openui5.org/"
+  },
+  {
+    "name": "Oxc",
+    "url": "https://oxc-project.github.io"
   },
   {
     "name": "p5.js",
@@ -1300,6 +1316,10 @@
     "url": "http://slushjs.github.io/"
   },
   {
+    "name": "Snowpack",
+    "url": "https://www.snowpack.dev"
+  },
+  {
     "name": "SocketIO",
     "url": "https://socket.io/"
   },
@@ -1370,6 +1390,10 @@
   {
     "name": "SVGR",
     "url": "https://github.com/smooth-code/svgr"
+  },
+  {
+    "name": "SWC",
+    "url": "https://swc.rs"
   },
   {
     "name": "Swip",
@@ -1476,8 +1500,20 @@
     "url": "https://github.com/youzan/vant"
   },
   {
+    "name": "Vento",
+    "url": "https://vento.js.org"
+  },
+  {
     "name": "Verb",
     "url": "https://github.com/verbose/verb-generate-readme"
+  },
+  {
+    "name": "Vite",
+    "url": "https://vitejs.dev"
+  },
+  {
+    "name": "Vitest",
+    "url": "https://vitest.dev"
   },
   {
     "name": "Volo",
