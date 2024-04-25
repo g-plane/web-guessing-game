@@ -37,6 +37,16 @@
       <Icon icon="material-symbols:refresh" /> Restart
     </Button>
   </div>
+  <div class="answered-logos">
+    Previously Answered:
+    <ul>
+      {#each answered as answeredLogo (answeredLogo)}
+        <li title={answeredLogo}>
+          <img src={'/logos/' + answeredLogo.toLowerCase() + '.webp'} alt="" width="24" height="24">
+        </li>
+      {/each}
+    </ul>
+  </div>
 </div>
 
 <style>
@@ -46,8 +56,7 @@
     align-items: center;
     color: rgb(var(--m3-scheme-on-primary-container));
   }
-
-  img {
+  .failure > img {
     margin-bottom: 2.5rem;
   }
 
@@ -71,5 +80,18 @@
 
   .restart {
     margin-top: 4rem;
+  }
+
+  .answered-logos {
+    margin-top: 3rem;
+  }
+  .answered-logos ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0.25rem;
+  }
+  .answered-logos li {
+    line-height: 0;
   }
 </style>
