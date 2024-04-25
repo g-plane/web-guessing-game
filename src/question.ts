@@ -1,4 +1,4 @@
-import { sample, sampleSize } from 'lodash-es'
+import { random, sample, sampleSize } from 'lodash-es'
 import { type Logo, logos } from './logos'
 
 export interface Question {
@@ -7,9 +7,14 @@ export interface Question {
 }
 
 export function generateQuestion(answered: string[]): Question {
-  const answers = sampleSize(logos.filter(({ name }) => !answered.includes(name)), 4)
+  const rest = logos.filter(({ name }) => !answered.includes(name))
+  const correct = sample(rest)!
+
+  const answers = sampleSize([...rest.map(({ name }) => name), ...answered], 3)
+  answers.splice(random(0, 3), 0, correct.name)
+
   return {
-    correct: sample(answers)!,
-    answers: answers.map(({ name }) => name),
+    correct,
+    answers,
   }
 }
