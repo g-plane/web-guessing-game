@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { StyleFromScheme, Switch } from 'm3-svelte'
+  import Icon from '@iconify/svelte'
+  import { ButtonLink, StyleFromScheme, Switch } from 'm3-svelte'
   import FailureCard from './components/FailureCard.svelte'
   import QuestionCard from './components/QuestionCard.svelte'
   import { generateQuestion } from './question'
@@ -51,6 +52,9 @@
     <Switch bind:checked={needsConfirmation} />
     <span>Needs Confirmation</span>
   </label>
+  <ButtonLink type="text" iconType="full" href="https://github.com/g-plane/web-guessing-game">
+    <Icon icon="mdi:github" />
+  </ButtonLink>
 </footer>
 
 <style>
@@ -64,6 +68,7 @@
   footer {
     position: fixed;
     bottom: 0.5rem;
+    width: calc(100vw - 0.5rem * 2);
     padding: 0.25rem 0.5rem;
     display: flex;
     justify-content: space-between;
