@@ -1548,6 +1548,10 @@
     "url": "https://wallabyjs.com/"
   },
   {
+    "name": "wasm-fmt",
+    "url": "https://github.com/wasm-fmt/wasm-fmt-vscode"
+  },
+  {
     "name": "WebGL",
     "url": "https://en.wikipedia.org/wiki/WebGL/"
   },
